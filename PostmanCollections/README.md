@@ -1,8 +1,15 @@
-## PostmanCollections
-A set of [Postman](https://www.getpostman.com/) collections that assist in discovering how to invoke CampusNexus Query Model and Command Model APIs.
+## PostmanCollections / InsomniaWorkspace
+These graphical desktop applications make it easy to experiment with HTTP-based APIs. They help you set up and revise queries, test command API calls, and can even generate code for you. Included are a set of [Postman](https://www.getpostman.com/) collections and the equivalent [Insomnia](https://insomnia.rest) workspace to assist you in discovering how to invoke the CampusNexus Query Model and Command Model APIs.
+
+With both applications, you'll need to import the files and configure variables to match your CampusNexus environment:
+
+* For Postman - Open Postman and import the CampusNexus.postman_collection Collection. Click on Management Environment and Add a new Environment. Give the Environment a name and Add a variable **rootUrl**. Set the variable to your CampusNexus Web Client Url. For example, https://university-a.campusnexus.cloud. Close the Environment window and change No Environment to the one you just created. You may also need to change Authorization, such as configuring Basic Auth.
+* For Insomnia - Open Insomnia and import the CampusNexus-Insomnia-Samples workspace. Click on the Environment drop down menu and select Manage Environment. Choose the CampusNexusEnv Sub Environment. Edit the JSON values for **rootUrl**, **username**, and **password** to match your CampusNexus Web Client Url and credentials. Change from No Environment and Activate the CampusNexusEnv environment. You may also need to select the Auth tab's dropdown and configure the authorization type. For example, choose Basic Auth. You can enter {{username}} for the username and {{password}} for the password and Insomnia will use the Environment's variables.
+
+Open the CampusNexus folder and choose a query or command. Happy experimenting!
 
 ### Queries
-Below is a list of the Postman requests found in the Queries folder of the Collection.
+Below is a list of the requests found in the Queries folder of the Postman Collection/Insomnia Workspace.
 1. **Read the service root**
 All REST APIs should have a single entry point from which a generic hypermedia client can navigate to the resources in the service. In the response we see links to three things: 1. The $metadata document that describes the schema of ther service 2. Links to various collections of objects like Students and Courses 3. Links to other top-level items like Me (a singleton) and operations.
 2. **Read the service metadata**
@@ -38,7 +45,7 @@ By default OData services return an extremely compact JSON format. This happens 
 17. **Invoke a bound function**
   OData support bound custom functions. The bound functions are bounded to a resource. Note: OData functions CANNOT have side effect, so only GET verb is allowed.
 ### Commands
-Below is a list of the Postman requests found in the Commands folder of the Collection.
+Below is a list of the requests found in the Commands folder.
 1. **Get Commands**
   Gets a list of all Commands broken down by domain: Academics, Admissions, Career Services, Common, CRM, Financial Aid, Student Accounts and Student Services
 2. **Create Course Type**
@@ -48,7 +55,7 @@ Below is a list of the Postman requests found in the Commands folder of the Coll
 4. **Get Course Type**
   An example of how to retrieve an existing entity.  Due to the way optomistic concurrency is implemented, this operation is required prior to calling the Save operation.
 5. **Delete Course Type**
-  Deletes an existing entity.  
+  Deletes an existing entity.
 6. **StudentPreviousEducation.Get**
   Represents how to invoke a non-CRUD related operation.  This operation will retieve the specified Student's previous education.
 7. **Cache.Remove**

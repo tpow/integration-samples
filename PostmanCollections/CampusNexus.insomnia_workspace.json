@@ -1,0 +1,876 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2018-09-01T03:04:12.103Z",
+	"__export_source": "insomnia.desktop.app:v6.0.2",
+	"resources": [
+		{
+			"_id": "wrk_a430f1833cd142bfbc093d8a6a63fc87",
+			"created": 1535769311460,
+			"description": "",
+			"modified": 1535770971687,
+			"name": "CampusNexus Insomnia Samples",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_f4c20ac40d634a21b7836acd749ae3e7",
+			"color": null,
+			"created": 1535769311474,
+			"data": {},
+			"isPrivate": false,
+			"metaSortKey": 1535769311474,
+			"modified": 1535770159713,
+			"name": "New Environment",
+			"parentId": "wrk_a430f1833cd142bfbc093d8a6a63fc87",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_22dfc23f35b24a489f2df4eb8a7f0c35",
+			"cookies": [
+				{
+					"creation": "2018-09-01T03:01:45.185Z",
+					"domain": "university-a.campusnexus.cloud",
+					"hostOnly": false,
+					"httpOnly": true,
+					"id": "3433053349837618",
+					"key": "ARRAffinity",
+					"lastAccessed": "2018-09-01T03:01:45.185Z",
+					"path": "/",
+					"value": "a13adc70113dcad91f7749afcbeaab51ffc9ee835c0a11c9252b32d8b430c1db"
+				}
+			],
+			"created": 1535769311477,
+			"modified": 1535770905187,
+			"name": "Default Jar",
+			"parentId": "wrk_a430f1833cd142bfbc093d8a6a63fc87",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_55103d0c5c9048aeb1fa3fca8250e195",
+			"created": 1535769361839,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1535769361839,
+			"modified": 1535769361839,
+			"name": "CampusNexus",
+			"parentId": "wrk_a430f1833cd142bfbc093d8a6a63fc87",
+			"_type": "request_group"
+		},
+		{
+			"_id": "env_0b1f72bc9a5b4982b4b8660ac48afefc",
+			"color": null,
+			"created": 1535770623663,
+			"data": {
+				"password": "password",
+				"rootUrl": "http://university-a.campusnexus.cloud/",
+				"username": "user@university-a.campusnexus.cloud"
+			},
+			"isPrivate": false,
+			"metaSortKey": 1535770623663,
+			"modified": 1535770885572,
+			"name": "CampusNexusEnv",
+			"parentId": "env_f4c20ac40d634a21b7836acd749ae3e7",
+			"_type": "environment"
+		},
+		{
+			"_id": "fld_18ed66db63c64e2e8bbe5a49eb46ea97",
+			"created": 1535769361814,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1535769361814,
+			"modified": 1535769361814,
+			"name": "Queries",
+			"parentId": "fld_55103d0c5c9048aeb1fa3fca8250e195",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_690aad416b1641ab9f7083a53f89402c",
+			"created": 1535769361837,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1535769361837,
+			"modified": 1535769361837,
+			"name": "Commands",
+			"parentId": "fld_55103d0c5c9048aeb1fa3fca8250e195",
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_6a6a8e2259864e10af2247d6a1de8a1e",
+			"authentication": {},
+			"body": {
+				"mimeType": "multipart/form-data",
+				"params": [
+					{
+						"disabled": true
+					}
+				]
+			},
+			"created": 1535769361775,
+			"description": "OData support bound custom functions. The bound functions are bounded to a resource. Note: OData functions CANNOT have side effect, so only GET verb is allowed.",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1535769361775,
+			"method": "GET",
+			"modified": 1535769361775,
+			"name": "Invoke a bound function",
+			"parameters": [],
+			"parentId": "fld_18ed66db63c64e2e8bbe5a49eb46ea97",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/ds/odata/Courses/CampusNexus.GetStudentEnrolledCourseList(studentId=30151)",
+			"_type": "request"
+		},
+		{
+			"_id": "req_feebd34899c4489fbff17a465b013e0e",
+			"authentication": {},
+			"body": {
+				"mimeType": "multipart/form-data",
+				"params": [
+					{
+						"disabled": true
+					}
+				]
+			},
+			"created": 1535769361778,
+			"description": "By default OData services return an extremely compact JSON format. This happens by stripping out all of the metadata that should be calculable by \"smart\" OData clients. For generic hypermedia clients, you can request additional metadata by using the Accept header or $format system query option to request application/json;odata.metadata=full. In this case, we get a bunch of additional annotations in the payload indicating type information and relationships to related resources.",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1535769361778,
+			"method": "GET",
+			"modified": 1535769361778,
+			"name": "Request full metadata",
+			"parameters": [],
+			"parentId": "fld_18ed66db63c64e2e8bbe5a49eb46ea97",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/ds/odata/Courses?$top=1&$format=application/json;odata.metadata=full",
+			"_type": "request"
+		},
+		{
+			"_id": "req_019589a0c2fb4f4f9e38b1ec78c1cc4d",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": ""
+			},
+			"created": 1535769361781,
+			"description": "You can use the $select system query option to only return specified properties.",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1535769361781,
+			"method": "GET",
+			"modified": 1535769361781,
+			"name": "Select the properties",
+			"parameters": [],
+			"parentId": "fld_18ed66db63c64e2e8bbe5a49eb46ea97",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/ds/odata/Courses(1)?$select=Code,Name",
+			"_type": "request"
+		},
+		{
+			"_id": "req_2a65b83fd9194957822ead81f3a779b4",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": ""
+			},
+			"created": 1535769361784,
+			"description": "You can use the $expand system query option to include related resources. The expand clause can include many of the other system query options, enabling left-join type semantics. Also, you can expand <property>/$ref in order to get just the links to the related resources.",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1535769361784,
+			"method": "GET",
+			"modified": 1535769361784,
+			"name": "Expand related entities",
+			"parameters": [],
+			"parentId": "fld_18ed66db63c64e2e8bbe5a49eb46ea97",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/ds/odata/Courses(1)?$expand=CourseType,CourseLevel",
+			"_type": "request"
+		},
+		{
+			"_id": "req_b149f6548fbf46a7b2b3c870542dc5cf",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": ""
+			},
+			"created": 1535769361786,
+			"description": "If you want to know how many items meet a condition, you can use the $count path segment. Note that the Content-Type header indicates that the content is text/plain. Although it doesn't work with system query options in the reference service, $count can typically be combined with $filter.",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1535769361786,
+			"method": "GET",
+			"modified": 1535769361786,
+			"name": "Counting the elements in a collection",
+			"parameters": [],
+			"parentId": "fld_18ed66db63c64e2e8bbe5a49eb46ea97",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/ds/odata/Courses/$count",
+			"_type": "request"
+		},
+		{
+			"_id": "req_149fe3e834e4405ebdec01e929ca467d",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": ""
+			},
+			"created": 1535769361789,
+			"description": "There are two types of paging in OData services. Servers can enable server-side paging, returning nextLinks that clients can follow to subsequent pages. Clients can drive paging using $top and $skip.",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1535769361789,
+			"method": "GET",
+			"modified": 1535769361789,
+			"name": "Client-side paging",
+			"parameters": [],
+			"parentId": "fld_18ed66db63c64e2e8bbe5a49eb46ea97",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/ds/odata/Courses?$top=2&$skip=2",
+			"_type": "request"
+		},
+		{
+			"_id": "req_6038a929e1cf48ffad8bc5eb5bfe08fb",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": ""
+			},
+			"created": 1535769361791,
+			"description": "You can use the $orderby system query option to specify ordering criteria. You can use many of the functions usable in $filter in $orderby as well.",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1535769361791,
+			"method": "GET",
+			"modified": 1535769361791,
+			"name": "Sort a collection",
+			"parameters": [],
+			"parentId": "fld_18ed66db63c64e2e8bbe5a49eb46ea97",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/ds/odata/Courses?$orderby=Name desc",
+			"_type": "request"
+		},
+		{
+			"_id": "req_ca23507083b3474e8cbd2df2b56337ac",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": ""
+			},
+			"created": 1535769361794,
+			"description": "You can use any/all lambda-style filters for collection properties.",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1535769361794,
+			"method": "GET",
+			"modified": 1535769361794,
+			"name": "Filter using any/all operators",
+			"parameters": [],
+			"parentId": "fld_18ed66db63c64e2e8bbe5a49eb46ea97",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://services.odata.org/V4/TripPinService/People?$filter=Emails/any(e: endswith(e, 'contoso.com'))",
+			"_type": "request"
+		},
+		{
+			"_id": "req_5fe15520bdd9485c918a74304f74915a",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": ""
+			},
+			"created": 1535769361795,
+			"description": "You can use and, or and not to create more complex filter clauses.",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1535769361795,
+			"method": "GET",
+			"modified": 1535769361795,
+			"name": "Filter using logic operators",
+			"parameters": [],
+			"parentId": "fld_18ed66db63c64e2e8bbe5a49eb46ea97",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/ds/odata/Courses?$filter=not(contains(Name,'a'))",
+			"_type": "request"
+		},
+		{
+			"_id": "req_386359e6d96f4f21b08840c255cbda6e",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": ""
+			},
+			"created": 1535769361797,
+			"description": "You can use any related properties in a filter clause by using the same segments used in the path to traverse properties.",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1535769361797,
+			"method": "GET",
+			"modified": 1535769361797,
+			"name": "Filter on nested structures",
+			"parameters": [],
+			"parentId": "fld_18ed66db63c64e2e8bbe5a49eb46ea97",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/ds/odata/Courses?$filter=CourseType/Name eq 'Competency Based'",
+			"_type": "request"
+		},
+		{
+			"_id": "req_3f6af473a5d5445180088d1c53aa403b",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": ""
+			},
+			"created": 1535769361799,
+			"description": "The $filter system query option can be used to filter any collection of resources. Note that the response to a filtered collection is a collection of the same type, regardless of the number of matched resources.",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1535769361799,
+			"method": "GET",
+			"modified": 1535769361799,
+			"name": "Filter a collection",
+			"parameters": [],
+			"parentId": "fld_18ed66db63c64e2e8bbe5a49eb46ea97",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/ds/odata/Courses?$filter=CreditHours eq 3",
+			"_type": "request"
+		},
+		{
+			"_id": "req_9e9797a266a747bc86f7d38d7b1708aa",
+			"authentication": {},
+			"body": {
+				"mimeType": "multipart/form-data",
+				"params": [
+					{
+						"disabled": true
+					}
+				]
+			},
+			"created": 1535769361801,
+			"description": "To navigate the resource graph, keep appending segments representing valid property names as defined in $metadata or in a full metadata response (see query x). In this case we have started from the service root, navigated to the entity set People, navigated to the resource keyed 'russellwhyte', navigated to the Friends property, navigated to the resource keyed 'scottketchum', and finally navigated to the AddressInfo property. Note that the @odata.context URL self-describes the payload.",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1535769361801,
+			"method": "GET",
+			"modified": 1535769361801,
+			"name": "Navigate to related entities",
+			"parameters": [],
+			"parentId": "fld_18ed66db63c64e2e8bbe5a49eb46ea97",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/ds/odata/Courses(1)/CourseType",
+			"_type": "request"
+		},
+		{
+			"_id": "req_d8b8c667851a4515a66196a2ddeae642",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": ""
+			},
+			"created": 1535769361803,
+			"description": "Even when fetching a primitive property, an object wrapper is returned rather than returning the raw primitive. This is to protect against a JSON vulnerability.",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1535769361803,
+			"method": "GET",
+			"modified": 1535769361803,
+			"name": "Get a primitive property",
+			"parameters": [],
+			"parentId": "fld_18ed66db63c64e2e8bbe5a49eb46ea97",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/ds/odata/Courses(1)?$select=Name",
+			"_type": "request"
+		},
+		{
+			"_id": "req_c875e0c1e2ee480b8bafe27498a1ae2b",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": ""
+			},
+			"created": 1535769361805,
+			"description": "To get a particular entity from a collection, append a key segment. By default, key segments in OData services are bounded by parens because they may be composite keys, e.g., OrderLine(OrderId=1,LineNumber=1) or alternate keys, e.g., Person(SSN='000-00-0000') and Person(2115) both address the same resource. Some OData services use normal URL segments for key segments, e.g., Orders/1. This is not recommended because of the scenarios mentioned above.",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1535769361805,
+			"method": "GET",
+			"modified": 1535769361805,
+			"name": "Get a single entity from an entity set",
+			"parameters": [],
+			"parentId": "fld_18ed66db63c64e2e8bbe5a49eb46ea97",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/ds/odata/Courses(1)",
+			"_type": "request"
+		},
+		{
+			"_id": "req_267316cc191f489385f6befd828c467e",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": ""
+			},
+			"created": 1535769361807,
+			"description": "One of the most common responses from a REST API is a collection of resources. In this case we asked for the People collection. For each response, the OData service writes a self-described response (another REST principle) by annotating the response with a context URL. This context URL tells the service that the contents of the response are a collection of things in the People entity set. The @odata.nextLink annotation is present because the server opted to split the result set across multiple pages. The client can also drive paging using $top and $skip, but server-side paging is a mitigation against DoS attacks. The value property contains the bulk of the response. Note that @odata.id and @odata.editLink should generally not be present in the payload unless they deviate from convention. In this case it appears that there is a bug in our sample service. Pretend those properties aren't there.",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1535769361807,
+			"method": "GET",
+			"modified": 1535769361807,
+			"name": "Read an entity set",
+			"parameters": [],
+			"parentId": "fld_18ed66db63c64e2e8bbe5a49eb46ea97",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/ds/odata/Courses",
+			"_type": "request"
+		},
+		{
+			"_id": "req_524f41ab3d0547549aba8018cfcb339c",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": ""
+			},
+			"created": 1535769361809,
+			"description": "$metadata is an endpoint in OData services that contains a machine-readable description of the service model including type schemas, available operations, etc.",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1535769361809,
+			"method": "GET",
+			"modified": 1535771030709,
+			"name": "Read the service metadata",
+			"parameters": [],
+			"parentId": "fld_18ed66db63c64e2e8bbe5a49eb46ea97",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/ds/odata/$metadata",
+			"_type": "request"
+		},
+		{
+			"_id": "req_3d4009dd0db64b66b05058b671bbe042",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": ""
+			},
+			"created": 1535769361811,
+			"description": "All REST APIs should have a single entry point from which a generic hypermedia client can navigate to the resources in the service. In the response we see links to three things: 1. The $metadata document that describes the schema of ther service 2. Links to various collections of objects like People and Airports 3. Links to other top-level items like Me (a singleton) and operations.",
+			"headers": [
+				{
+					"id": "pair_d5d7f6e33949445a9c5119eca539486a",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1535769361811,
+			"method": "GET",
+			"modified": 1535771024539,
+			"name": "Read the service root",
+			"parameters": [],
+			"parentId": "fld_18ed66db63c64e2e8bbe5a49eb46ea97",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/ds/odata/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_7dcc80aeb6d64390970932eb8abccb4d",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": ""
+			},
+			"created": 1535769361816,
+			"description": "",
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1535769361816,
+			"method": "POST",
+			"modified": 1535769361816,
+			"name": "Cache.Clear",
+			"parameters": [],
+			"parentId": "fld_690aad416b1641ab9f7083a53f89402c",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/api/commands/Common/Cache/Clear",
+			"_type": "request"
+		},
+		{
+			"_id": "req_3439823e60c9475d99c7a1e4242fa6ed",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": "{\"payload\":\"AuthStorage\"}"
+			},
+			"created": 1535769361819,
+			"description": "",
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1535769361819,
+			"method": "POST",
+			"modified": 1535769361819,
+			"name": "Cache.Remove",
+			"parameters": [],
+			"parentId": "fld_690aad416b1641ab9f7083a53f89402c",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/api/commands/Common/Cache/Remove",
+			"_type": "request"
+		},
+		{
+			"_id": "req_83047c687fbf416f98a90114d7076183",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": "{\"payload\":{\"Id\":13}}"
+			},
+			"created": 1535769361822,
+			"description": "",
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1535769361822,
+			"method": "POST",
+			"modified": 1535769361822,
+			"name": "StudentPreviousEducation.Get",
+			"parameters": [],
+			"parentId": "fld_690aad416b1641ab9f7083a53f89402c",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/api/commands/Admissions/StudentPreviousEducation/Get",
+			"_type": "request"
+		},
+		{
+			"_id": "req_300ef7a477004639aef18816c3c6a3a0",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": "{}"
+			},
+			"created": 1535769361823,
+			"description": "",
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1535769361823,
+			"method": "POST",
+			"modified": 1535769361823,
+			"name": "SecurityContext.GetAll",
+			"parameters": [],
+			"parentId": "fld_690aad416b1641ab9f7083a53f89402c",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/api/commands/Common/SecurityContext/GetAll",
+			"_type": "request"
+		},
+		{
+			"_id": "req_f29842f61fce42088e3d8fbe0db8a7b0",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": "{\n    \"payload\": {\n            \"id\": 53,\n            \"code\": \"Test\",\n            \"createdDateTime\": \"2018/05/16 15:53:50\",\n            \"isActive\": true,\n            \"isSystemCode\": false,\n            \"lastModifiedDateTime\": \"2018/05/16 15:59:37\",\n            \"lastModifiedUserId\": 170,\n            \"name\": \"Test\",\n            \"rowVersion\": \"AAAAAAUdgtY=\",\n            \"originalState\": \"H4sIAAAAAAAEAMWV30/CMBDH/xWyd9aNMdBlLEF9IYIkMog+ntsNmmwt6RXn/OuFgcaXonNG+9A+3PV7n9yPNhwrBdU8u8VqBfkO5xlpxcUaRBVXW+y8FLmgkbXRehswRskGCyC74ImSJDNtJ7JgPcfxmOuwBSoOOX8FzaVgtTBZR4WAf2iUZWmXni3V+nDRZQ+z6aKW7XJBGkSCVhQacGpDNElDdjjD2qXDA703jSwIuNDv8eDreFbkeyGrNaJa0BjRjHItUzTAHL0b8cRIujWRQtCY3uy3mBcmuPRkboTXc9yLruN33UHs+oHvBb7TlnZC40TzZxPmk5Q5gmhEqdUO22MtKtJYnCnvT9AyyKk12xRIz2TKM/4nVb4MvKHd77eelM/YS0L1a0PsDlt34R0YU/hPU3wvyxUq2r+jpvYDwkH/igtQVSO6cb2W6Vo/jr5Byc7/D9EbQ3heMUAGAAA=\",\n            \"secureState\": \"H4sIAAAAAAAEAD3MQQrCMBAAwK9I7mZTeysqeFbpoSJel5C0C01Ssisxvl6s4ANm9qecsfb+7Ood56frPUumOGKst7q4zSvMkQ9qElk6ALaTC8g6kM2JkxdtU4CdMS00BgaXCWd6o1CKsMasfkNH/6OUokurUx6/sIHH9TKs7ZYiC0brFBw/juQnSpcAAAA=\",\n            \"extendedProperties\": [],\n            \"entityState\": 3\n        \n    }\n}"
+			},
+			"created": 1535769361825,
+			"description": "",
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1535769361825,
+			"method": "POST",
+			"modified": 1535769361825,
+			"name": "Delete Course Type",
+			"parameters": [],
+			"parentId": "fld_690aad416b1641ab9f7083a53f89402c",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/api/commands/Academics/CourseType/delete",
+			"_type": "request"
+		},
+		{
+			"_id": "req_db7e4b105b7f4c72bd9d4edb8dc3c50a",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": "{\n    \"payload\": {\n        \"id\": 27,\n        \"code\": \"GM-01\",\n        \"createdDateTime\": \"2015/05/15 14:21:22\",\n        \"isActive\": true,\n        \"isSystemCode\": false,\n        \"name\": \"Assessment\",\n        \"rowVersion\": \"AAAAAAUdgR4=\"\n    }\n}"
+			},
+			"created": 1535769361827,
+			"description": "",
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1535769361827,
+			"method": "POST",
+			"modified": 1535769361827,
+			"name": "Save Course Type",
+			"parameters": [],
+			"parentId": "fld_690aad416b1641ab9f7083a53f89402c",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/api/commands/Academics/CourseType/save",
+			"_type": "request"
+		},
+		{
+			"_id": "req_fb9a6233ca41479e8033019d54c19bd7",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": "{\r\n  \"payload\": {\r\n    \"id\": 27\r\n  }\r\n}"
+			},
+			"created": 1535769361829,
+			"description": "OData support bound custom actions. Actions can have side effects. So the HTTP verb for an OData action can be GET,POST,PUT,DELETE according to the behavior of the action. In the example below, the action implies a POST.",
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1535769361829,
+			"method": "POST",
+			"modified": 1535769361829,
+			"name": "Get Course Type",
+			"parameters": [],
+			"parentId": "fld_690aad416b1641ab9f7083a53f89402c",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/api/commands/Academics/CourseType/get",
+			"_type": "request"
+		},
+		{
+			"_id": "req_7d4d4ef5bc894ddf8fd68f47b36d60a7",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": "{\n    \"payload\": {\n        \"code\": \"Test\",\n        \"createdDateTime\": \"2018/05/16 15:53:50\",\n        \"isActive\": true,\n        \"isSystemCode\": false,\n        \"name\": \"Test\"\n    }\n}"
+			},
+			"created": 1535769361831,
+			"description": "",
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1535769361831,
+			"method": "POST",
+			"modified": 1535769361831,
+			"name": "Save New Course Type",
+			"parameters": [],
+			"parentId": "fld_690aad416b1641ab9f7083a53f89402c",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/api/commands/Academics/CourseType/saveNew",
+			"_type": "request"
+		},
+		{
+			"_id": "req_7964dd7ea3af4c9f9620768510f56ca2",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": ""
+			},
+			"created": 1535769361833,
+			"description": "OData support bound custom actions. Actions can have side effects. So the HTTP verb for an OData action can be GET,POST,PUT,DELETE according to the behavior of the action. In the example below, the action implies a POST.",
+			"headers": [
+				{
+					"id": "pair_c051ff06657c4628bfacac1346e39475",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1535769361833,
+			"method": "POST",
+			"modified": 1535769397300,
+			"name": "Create Course Type",
+			"parameters": [],
+			"parentId": "fld_690aad416b1641ab9f7083a53f89402c",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/api/commands/Academics/CourseType/create",
+			"_type": "request"
+		},
+		{
+			"_id": "req_2ddb9473f97146d68c64a5dd7c1da636",
+			"authentication": {
+				"disabled": false,
+				"password": "{{ password  }}",
+				"type": "basic",
+				"username": "{{username}}"
+			},
+			"body": {
+				"mimeType": "",
+				"text": "{\n  \"payload\": {\n    \"id\": 27\n  }\n}"
+			},
+			"created": 1535769361835,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_70427cc6efb24fcaafd9db2a69802c22",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1535769361835,
+			"method": "GET",
+			"modified": 1535771014110,
+			"name": "Get Commands",
+			"parameters": [],
+			"parentId": "fld_690aad416b1641ab9f7083a53f89402c",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{rootUrl}}/api/commands",
+			"_type": "request"
+		}
+	]
+}
